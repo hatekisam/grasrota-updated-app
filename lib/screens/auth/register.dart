@@ -12,11 +12,22 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   bool loading = false;
   final _formKey = GlobalKey<FormState>();
+  final _formKey2 = GlobalKey<FormState>();
+  int curIndex = 1;
 //   final AuthService _auth = AuthService();
-
+  String username = "";
   String email = "";
   String password = "";
+  String tlf = "";
   String error = "";
+  File? imageFile;
+  int price = 100;
+  bool iAccept = false;
+  bool colorRed = false;
+  bool isLoading = false;
+  bool _isError = false;
+  String errorMessage = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
